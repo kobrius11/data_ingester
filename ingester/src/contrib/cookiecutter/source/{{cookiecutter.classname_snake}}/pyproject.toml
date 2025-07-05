@@ -1,0 +1,15 @@
+[project]
+name = "{{ cookiecutter.classname_snake }}"
+version = "{{ cookiecutter.version }}"
+description = "Plugin for data-ingester"
+dependencies = []
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "{{ cookiecutter.classname_snake }}"
+
+[project.entry-points."ingester.plugins"]
+{{ cookiecutter.classname_snake }} = "{{ cookiecutter.classname_snake }}"
