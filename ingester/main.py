@@ -1,7 +1,14 @@
-from src.cli import ingester
-from ingester.src.conf import settings
+import logging
+from ingester.src.base import BaseClient
+from ingester.src.base.endpoint import ClientEndpoints
+
+
+client = BaseClient()
+# client.endpoints.append("hello")
+
+
 
 
 if __name__ == "__main__":
     # ingester()
-    print(settings.SOURCES)
+    print(client.endpoints)

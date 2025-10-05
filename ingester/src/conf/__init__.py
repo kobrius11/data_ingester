@@ -12,7 +12,6 @@ class Settings():
 
         if settings_module is not None:
             module = importlib.import_module(settings_module)
-            print(module)
             
             for setting in dir(module):
                 if setting.isupper():
